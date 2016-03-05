@@ -11,8 +11,12 @@ class Table {
         Table();
         ~Table();
         bool insertData(vector<string>data);
-        vector<string>TableData[3];
+        bool addColumn(string name, int type, int unit, int isKey);
 
-    private:
+        vector<string> TableData[3];
+
         vector<string> columnName;
+        std::vector<int> columnType;
+        vector<int> columnUnit;
+        vector<int> columnKey;
 };
