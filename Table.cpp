@@ -15,3 +15,12 @@ bool Table::insertData(vector<string> data)
 
     return true;
 }
+
+bool Table::addColumn(string name, int type, int unit, int isKey)
+{
+    columnName.push_back(name);
+    columnUnit.push_back(unit);
+    columnType.push_back(type);
+    columnKey.push_back(isKey);
+    return true;
+}
